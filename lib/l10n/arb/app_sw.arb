@@ -1,12 +1,12 @@
 {
-    "@@locale": "en",
+    "@@locale": "sw",
     "fashionista": "The home for a fashionista",
-    "@fashionista": {
-        "description": "Text shown in the AppBar of the technical test Page"
+    "@counterAppBarTitle": {
+        "description": "mada"
     },
-    "welcome": "Welcome to GemStore!",
+    "welcome": "Karibu kwenye GemStore!",
     "@welcome": {
-        "description": "welcome"
+        "description": "mada"
     },
     "splashButtonLabel": "Get Started",
     "@splashButtonLabel": {

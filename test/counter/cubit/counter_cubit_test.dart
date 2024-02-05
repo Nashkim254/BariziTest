@@ -1,4 +1,4 @@
-import 'package:barizi_nashon_test/counter/counter.dart';
+import 'package:barizi_nashon_test/splashscreen/splash.dart';
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_test/flutter_test.dart';
 

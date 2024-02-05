@@ -1,5 +1,5 @@
 import 'package:barizi_nashon_test/app/app.dart';
-import 'package:barizi_nashon_test/counter/counter.dart';
+import 'package:barizi_nashon_test/splashscreen/splash.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
