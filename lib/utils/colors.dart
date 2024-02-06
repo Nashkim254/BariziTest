@@ -26,3 +26,4 @@ const filledColor = Color(0xffF3F4F9);
 const hintTextColor = Color(0xff86869E);
 const borderColor = Color(0xff7C7C7C);
 const dividerColor = Color(0xffF3F3F3);
+const categoryTextColor = Color(0xff9D9D9D);

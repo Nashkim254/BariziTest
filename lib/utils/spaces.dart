@@ -29,6 +29,7 @@ const space30 = 30.0;
 const space32 = 32.0;
 const space35 = 35.0;
 const space40 = 40.0;
+const space42 = 42.0;
 const space44 = 44.0;
 const space45 = 45.0;
 const space48 = 48.0;
