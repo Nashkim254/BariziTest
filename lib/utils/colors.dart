@@ -6,7 +6,7 @@ const Color darkBlueColor = Color(0xff27214D);
 const Color whiteColor = Color(0xffFFFFFF);
 const Color shadedWhiteColor = Color(0xffF5f5f5);
 const Color blackColor = Color(0xff000000);
-const Color lightDarkColor = Color(0xff5a5963);
+const Color lightDarkColor = Color(0xff9B9B9B);
 const Color warningColor = Color(0xffEC6666);
 const Color redColor = Color(0xffFE554A);
 const Color greenColor = Color(0xff4CD964);
@@ -15,9 +15,9 @@ const Color shadedGreenColor = Color(0xffE0FFE5);
 
 
 const Color secondaryColor = Color(0xff78D2DE);
-const Color cardColor1 = Color(0xffFFFAEB);
-const Color cardColor2 = Color(0xffFEF0F0);
-const Color cardColor3 = Color(0xffF1EFF6);
+const Color cardColor1 = Color(0xffE3E0E7);
+const Color cardColor2 = Color(0xffDFDFDD);
+const Color cardColor3 = Color(0xffDFDFDD);
 
 
 const iconColor = Color(0xffFFF2E7);
@@ -25,5 +25,10 @@ const greyColor = Color(0xffA7A6A5);
 const filledColor = Color(0xffF3F4F9);
 const hintTextColor = Color(0xff86869E);
 const borderColor = Color(0xff3A2C27);
+const borderColor2 = Color(0xffF9F9F9);
 const dividerColor = Color(0xffF3F3F3);
 const categoryTextColor = Color(0xff9D9D9D);
+const featureTextColor = Color(0xff1D1F22);
+const boxColor = Color(0xffF8F8FA);
+const containerColor = Color(0xffE2E2E2);
+const boxTextColor = Color(0xff777E90);
