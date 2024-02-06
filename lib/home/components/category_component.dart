@@ -11,13 +11,26 @@ Widget categoryWidget(BuildContext context, CategoryModel category) {
       Container(
         height: space42,
         width: space42,
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           shape: BoxShape.circle,
           color: dividerColor,
+          border: category.isSelected ? Border.all(color: borderColor) : null,
         ),
-        child: Center(
-          child: SvgPicture.asset(category.svg!),
-        ),
+        child: category.isSelected == false
+            ? Center(
+                child: SvgPicture.asset(category.svg!),
+              )
+            : Container(
+                height: space36,
+                width: space36,
+                decoration: const BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: borderColor,
+                ),
+                child: Center(
+                  child: SvgPicture.asset(category.svg!),
+                ),
+              ),
       ),
       Text(
         category.name!,

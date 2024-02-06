@@ -11,7 +11,6 @@ class CategoryModel {
   //toggle selected
   void toggleSelected() {
       isSelected = !isSelected;
-    ;
   }
 }
 

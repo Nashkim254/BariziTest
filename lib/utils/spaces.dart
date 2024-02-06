@@ -10,6 +10,8 @@ double getScreenWidth(BuildContext context) {
   return MediaQuery.of(context).size.width;
 }
 
+const space0 = 0.0;
+const space1 = 1.0;
 const space2 = 2.0;
 const space4 = 4.0;
 const space5 = 5.0;
@@ -28,6 +30,7 @@ const space28 = 28.0;
 const space30 = 30.0;
 const space32 = 32.0;
 const space35 = 35.0;
+const space36 = 36.0;
 const space40 = 40.0;
 const space42 = 42.0;
 const space44 = 44.0;

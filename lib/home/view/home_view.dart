@@ -45,11 +45,9 @@ class HomeView extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(
-                  height: space20,
+                  height: space40,
                 ),
-                Expanded(
-                  child: _buildCategory(),
-                ),
+                _buildCategory(context),
               ],
             ),
           ),
@@ -58,18 +56,19 @@ class HomeView extends StatelessWidget {
     );
   }
 
-  Widget _buildCategory() {
-    return ListView.separated(
-      scrollDirection: Axis.horizontal,
-      shrinkWrap: true,
-      itemBuilder: (context, int index) => categoryWidget(
-        context,
-        getCategories[index],
+  Widget _buildCategory(BuildContext context) {
+    return Row(
+      children: List.generate(
+        getCategories.length,
+        (index) => Expanded(
+          child: Padding(
+            padding: EdgeInsets.only(
+              right: index != getCategories.length - 1 ? space8 : space0,
+            ), // Add space between items
+            child: categoryWidget(context, getCategories[index]),
+          ),
+        ),
       ),
-      separatorBuilder: (context, int index) => const SizedBox(
-        width: space8,
-      ),
-      itemCount: getCategories.length,
     );
   }
 }
