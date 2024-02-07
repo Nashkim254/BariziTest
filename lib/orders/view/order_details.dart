@@ -122,6 +122,16 @@ class OrderDetails extends StatelessWidget {
                     ),
                   ),
                   border: Border.all(color: borderColor2),
+                  color: whiteColor,
+                  boxShadow: [
+                    BoxShadow(
+                      color: shadowColor.withOpacity(0.2),
+                      spreadRadius: space3,
+                      blurRadius: space10,
+                      offset: const Offset(space0, space3),
+                      // changes position of shadow
+                    ),
+                  ],
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(space16),
@@ -220,6 +230,16 @@ class OrderDetails extends StatelessWidget {
                     ),
                   ),
                   border: Border.all(color: borderColor2),
+                  color: whiteColor,
+                  boxShadow: [
+                    BoxShadow(
+                      color: shadowColor.withOpacity(0.2),
+                      spreadRadius: space3,
+                      blurRadius: space10,
+                      offset: const Offset(space0, space3),
+                      // changes position of shadow
+                    ),
+                  ],
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(space12),
