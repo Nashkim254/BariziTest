@@ -13,8 +13,10 @@ double getScreenWidth(BuildContext context) {
 const space0 = 0.0;
 const space1 = 1.0;
 const space2 = 2.0;
+const space3 = 3.0;
 const space4 = 4.0;
 const space5 = 5.0;
+const space7 = 7.0;
 const space8 = 8.0;
 const space10 = 10.0;
 const space12 = 12.0;

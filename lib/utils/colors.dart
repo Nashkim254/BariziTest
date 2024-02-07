@@ -38,3 +38,4 @@ const iconColor2 = Color(0xff1E3354);
 const orderColor = Color(0xff121420);
 const neutral = Color(0xff23262F);
 const rateColor = Color(0xff343434);
+const shadowColor = Color(0xff0F0F0F);

@@ -122,162 +122,177 @@ class OrdersView extends StatelessWidget {
   }
 
   Widget buildOrderCard(OrderModel orderModel, BuildContext context) {
-    return SizedBox(
+    return Container(
       height: space182,
       width: double.infinity,
-      child: Card(
+      decoration: BoxDecoration(
+        border: Border.all(color: borderColor2),
         color: whiteColor,
-        child: Padding(
-          padding: const EdgeInsets.all(space16),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    'Order #${orderModel.orderRef}',
-                    style: ThemeText.blackTextTheme.copyWith(
-                      color: blackColor3,
-                      fontSize: space18,
-                    ),
+        borderRadius: const BorderRadius.all(
+          Radius.circular(
+            space10,
+          ),
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: shadowColor.withOpacity(0.2),
+            spreadRadius: space3,
+            blurRadius: space10,
+            offset: const Offset(space0, space3), 
+            // changes position of shadow
+          ),
+        ],
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(space16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Order #${orderModel.orderRef}',
+                  style: ThemeText.blackTextTheme.copyWith(
+                    color: blackColor3,
+                    fontSize: space18,
                   ),
-                  Text(
-                    orderModel.date,
-                    style: ThemeText.blackTextTheme.copyWith(
-                        color: boxTextColor, fontSize: space14, fontFamily: 'Product Sans Medium'),
-                  ),
-                ],
-              ),
-              const SizedBox(
-                height: space12,
-              ),
-              RichText(
-                text: TextSpan(
-                  children: [
-                    TextSpan(
-                      text: 'Tracking number:  ',
-                      style: ThemeText.blackTextTheme.copyWith(
-                        color: boxTextColor,
-                        fontSize: space14,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                    TextSpan(
-                      text: orderModel.trackingNumber,
-                      style: ThemeText.blackTextTheme.copyWith(
-                        color: blackColor,
-                        fontSize: space14,
-                        fontFamily: 'Product Sans Medium',
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                  ],
                 ),
-              ),
-              const SizedBox(
-                height: space12,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                Text(
+                  orderModel.date,
+                  style: ThemeText.blackTextTheme.copyWith(
+                      color: boxTextColor, fontSize: space14, fontFamily: 'Product Sans Medium'),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: space12,
+            ),
+            RichText(
+              text: TextSpan(
                 children: [
-                  RichText(
-                    text: TextSpan(
-                      children: [
-                        TextSpan(
-                          text: 'Quanlity:  ',
-                          style: ThemeText.blackTextTheme.copyWith(
-                            color: boxTextColor,
-                            fontSize: space14,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        TextSpan(
-                          text: orderModel.quantity.toString(),
-                          style: ThemeText.blackTextTheme.copyWith(
-                            color: blackColor,
-                            fontSize: space14,
-                            fontFamily: 'Product Sans Medium',
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  RichText(
-                    text: TextSpan(
-                      children: [
-                        TextSpan(
-                          text: 'Subtotal:  ',
-                          style: ThemeText.blackTextTheme.copyWith(
-                            color: boxTextColor,
-                            fontSize: space14,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        TextSpan(
-                          text: '\$ ${orderModel.amount}',
-                          style: ThemeText.blackTextTheme.copyWith(
-                            color: blackColor,
-                            fontSize: space14,
-                            fontFamily: 'Product Sans Medium',
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-              const SizedBox(
-                height: space12,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    orderModel.status,
+                  TextSpan(
+                    text: 'Tracking number:  ',
                     style: ThemeText.blackTextTheme.copyWith(
-                      color: greenColor,
-                      fontSize: space18,
+                      color: boxTextColor,
+                      fontSize: space14,
                       fontWeight: FontWeight.w500,
                     ),
                   ),
-                  InkWell(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute<dynamic>(
-                          builder: (_) => OrderDetails(
-                            orderDetails: orderModel,
-                          ),
-                        ),
-                      );
-                    },
-                    child: Container(
-                      height: space35,
-                      width: space100,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(space30),
-                        border: Border.all(
+                  TextSpan(
+                    text: orderModel.trackingNumber,
+                    style: ThemeText.blackTextTheme.copyWith(
+                      color: blackColor,
+                      fontSize: space14,
+                      fontFamily: 'Product Sans Medium',
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: space12,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                RichText(
+                  text: TextSpan(
+                    children: [
+                      TextSpan(
+                        text: 'Quanlity:  ',
+                        style: ThemeText.blackTextTheme.copyWith(
                           color: boxTextColor,
+                          fontSize: space14,
+                          fontWeight: FontWeight.w500,
                         ),
                       ),
-                      child: Center(
-                        child: Text(
-                          'Details',
-                          style: ThemeText.whiteTextTheme.copyWith(
-                            fontSize: space14,
-                            color: blackColor,
-                            fontWeight: FontWeight.w500,
-                          ),
+                      TextSpan(
+                        text: orderModel.quantity.toString(),
+                        style: ThemeText.blackTextTheme.copyWith(
+                          color: blackColor,
+                          fontSize: space14,
+                          fontFamily: 'Product Sans Medium',
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                RichText(
+                  text: TextSpan(
+                    children: [
+                      TextSpan(
+                        text: 'Subtotal:  ',
+                        style: ThemeText.blackTextTheme.copyWith(
+                          color: boxTextColor,
+                          fontSize: space14,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      TextSpan(
+                        text: '\$ ${orderModel.amount}',
+                        style: ThemeText.blackTextTheme.copyWith(
+                          color: blackColor,
+                          fontSize: space14,
+                          fontFamily: 'Product Sans Medium',
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: space12,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  orderModel.status,
+                  style: ThemeText.blackTextTheme.copyWith(
+                    color: greenColor,
+                    fontSize: space18,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute<dynamic>(
+                        builder: (_) => OrderDetails(
+                          orderDetails: orderModel,
+                        ),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    height: space35,
+                    width: space100,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(space30),
+                      border: Border.all(
+                        color: boxTextColor,
+                      ),
+                    ),
+                    child: Center(
+                      child: Text(
+                        'Details',
+                        style: ThemeText.whiteTextTheme.copyWith(
+                          fontSize: space14,
+                          color: blackColor,
+                          fontWeight: FontWeight.w500,
                         ),
                       ),
                     ),
                   ),
-                ],
-              )
-            ],
-          ),
+                ),
+              ],
+            )
+          ],
         ),
       ),
     );
