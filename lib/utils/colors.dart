@@ -12,15 +12,13 @@ const Color lightDarkColor = Color(0xff575757);
 const Color warningColor = Color(0xffEC6666);
 const Color redColor = Color(0xffFE554A);
 const Color greenColor = Color(0xff009254);
-const Color darkGreenColor =  Color(0xff6ce6c9);
+const Color darkGreenColor = Color(0xff6ce6c9);
 const Color shadedGreenColor = Color(0xffE0FFE5);
-
 
 const Color secondaryColor = Color(0xff78D2DE);
 const Color cardColor1 = Color(0xffE3E0E7);
 const Color cardColor2 = Color(0xffDFDFDD);
 const Color cardColor3 = Color(0xffDFDFDD);
-
 
 const iconColor = Color(0xffFFF2E7);
 const greyColor = Color(0xffE6E8EC);
@@ -39,3 +37,6 @@ const orderColor = Color(0xff121420);
 const neutral = Color(0xff23262F);
 const rateColor = Color(0xff343434);
 const shadowColor = Color(0xff0F0F0F);
+const lastContinerColor = Color(0xffF8F8FA);
+const lastTextColor = Color(0xff737680);
+const lastTextColor2 = Color(0xff1D1F22);

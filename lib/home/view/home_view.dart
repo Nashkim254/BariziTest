@@ -1,8 +1,10 @@
 import 'package:barizi_nashon_test/home/components/category_component.dart';
 import 'package:barizi_nashon_test/home/components/feature_componenet.dart';
+import 'package:barizi_nashon_test/home/components/last_widget.dart';
 import 'package:barizi_nashon_test/home/components/recommendedWidget.dart';
 import 'package:barizi_nashon_test/home/models/category_model.dart';
 import 'package:barizi_nashon_test/home/models/feature_model.dart';
+import 'package:barizi_nashon_test/home/models/last_model.dart';
 import 'package:barizi_nashon_test/home/models/recommended_model.dart';
 import 'package:barizi_nashon_test/utils/carousel_controller.dart';
 import 'package:barizi_nashon_test/utils/colors.dart';
@@ -244,7 +246,15 @@ class _HomeViewState extends State<HomeView> {
             const SizedBox(
               height: space12,
             ),
-            
+            Padding(
+                 padding: const EdgeInsets.symmetric(
+                horizontal: space24,
+              ),
+              child: buildLastContainer(),
+            ),
+             const SizedBox(
+              height: space20,
+            ),
           ],
         ),
       ),
@@ -279,6 +289,22 @@ class _HomeViewState extends State<HomeView> {
               right: index != getFeatures.length - 1 ? space8 : space0,
             ), // Add space between items
             child: featureWidget(context, getFeatures[index]),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget buildLastContainer() {
+     return Row(
+      children: List.generate(
+        getLastModel.length,
+        (index) => Expanded(
+          child: Padding(
+            padding: EdgeInsets.only(
+              right: index != getLastModel.length - 1 ? space16 : space0,
+            ), // Add space between items
+            child: lastWidget(getLastModel[index]),
           ),
         ),
       ),
