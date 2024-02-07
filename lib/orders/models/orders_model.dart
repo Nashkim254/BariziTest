@@ -7,10 +7,12 @@ class OrderModel {
     required this.amount,
     required this.status,
     required this.items,
+    required this.address,
   });
   String orderRef;
   String date;
   String trackingNumber;
+  String address;
   int quantity;
   double amount;
   String status;
@@ -31,7 +33,8 @@ class Items {
 List<OrderModel> orders = [
   OrderModel(
     orderRef: '1514',
-    quantity: 0,
+    address: 'SBI Building, Software Park',
+    quantity: 3,
     date: '13/05/2021',
     trackingNumber: 'IK987362341',
     amount: 110,
@@ -53,6 +56,7 @@ List<OrderModel> orders = [
     orderRef: '24456',
     quantity: 1,
     date: '12/05/2021',
+    address: 'SBI Building, Software Park',
     trackingNumber: 'IK3873218890',
     amount: 780,
     status: 'DELIVERED',
@@ -73,6 +77,7 @@ List<OrderModel> orders = [
     orderRef: 'Cancelled',
     quantity: 2,
     date: '11/05/2021',
+    address: 'SBI Building, Software Park',
     trackingNumber: 'IK237368881',
     amount: 810,
     status: 'DELIVERED',

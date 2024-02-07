@@ -1,6 +1,7 @@
 import 'package:barizi_nashon_test/orders/models/orders_model.dart';
 import 'package:barizi_nashon_test/orders/models/tab_model.dart';
 import 'package:barizi_nashon_test/orders/orders.dart';
+import 'package:barizi_nashon_test/orders/view/order_details.dart';
 import 'package:barizi_nashon_test/utils/colors.dart';
 import 'package:barizi_nashon_test/utils/spaces.dart';
 import 'package:barizi_nashon_test/utils/themes.dart';
@@ -80,9 +81,9 @@ class OrdersView extends StatelessWidget {
                   SizedBox(
                     height: getScreenHeight(context),
                     child: ListView.separated(
-                       physics: const NeverScrollableScrollPhysics(),
+                      physics: const NeverScrollableScrollPhysics(),
                       itemBuilder: (context, int index) {
-                        return buildOrderCard(orders[index]);
+                        return buildOrderCard(orders[index], context);
                       },
                       separatorBuilder: (context, int index) => const SizedBox(
                         height: space12,
@@ -120,7 +121,7 @@ class OrdersView extends StatelessWidget {
     );
   }
 
-  Widget buildOrderCard(OrderModel orderModel) {
+  Widget buildOrderCard(OrderModel orderModel, BuildContext context) {
     return SizedBox(
       height: space182,
       width: double.infinity,
@@ -242,7 +243,16 @@ class OrdersView extends StatelessWidget {
                     ),
                   ),
                   InkWell(
-                    onTap: (){},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute<dynamic>(
+                          builder: (_) => OrderDetails(
+                            orderDetails: orderModel,
+                          ),
+                        ),
+                      );
+                    },
                     child: Container(
                       height: space35,
                       width: space100,
