@@ -1,5 +1,5 @@
-import 'package:barizi_nashon_test/home/view/home_view.dart';
 import 'package:barizi_nashon_test/l10n/l10n.dart';
+import 'package:barizi_nashon_test/navigation/view/bottom_nav.dart';
 import 'package:barizi_nashon_test/splashscreen/splash.dart';
 import 'package:barizi_nashon_test/utils/colors.dart';
 import 'package:barizi_nashon_test/utils/spaces.dart';
@@ -78,7 +78,7 @@ class Splash extends StatelessWidget {
                 callback: () => Navigator.push(
                   context,
                   MaterialPageRoute<dynamic>(
-                    builder: (_) => const HomeView(),
+                    builder: (_) => const HomeDashBoardScreen(),
                   ),
                 ),
                 buttonColor: whiteColor.withOpacity(.25),

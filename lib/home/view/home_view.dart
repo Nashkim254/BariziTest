@@ -21,7 +21,7 @@ class HomeView extends StatefulWidget {
 
 class _HomeViewState extends State<HomeView> {
   late final CarouselController _carouselController;
-  bool _isLastPage = false;
+  bool isTheLastPage = false;
   @override
   void initState() {
     _carouselController = CarouselController();
@@ -89,7 +89,7 @@ class _HomeViewState extends State<HomeView> {
                 pages: onBoardigImages,
                 controller: _carouselController,
                 onPageChanged: ({required bool isLastPage}) => setState(() {
-                  _isLastPage = isLastPage;
+                  isTheLastPage = isLastPage;
                 }),
               ),
             ),
@@ -229,7 +229,7 @@ class _HomeViewState extends State<HomeView> {
             const SizedBox(
               height: space12,
             ),
-                const Padding(
+            const Padding(
               padding: EdgeInsets.symmetric(
                 horizontal: space24,
               ),
@@ -244,6 +244,7 @@ class _HomeViewState extends State<HomeView> {
             const SizedBox(
               height: space12,
             ),
+            
           ],
         ),
       ),

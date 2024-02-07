@@ -21,7 +21,7 @@ const Color cardColor3 = Color(0xffDFDFDD);
 
 
 const iconColor = Color(0xffFFF2E7);
-const greyColor = Color(0xffA7A6A5);
+const greyColor = Color(0xffE6E8EC);
 const filledColor = Color(0xffF3F4F9);
 const hintTextColor = Color(0xff86869E);
 const borderColor = Color(0xff3A2C27);
