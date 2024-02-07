@@ -63,6 +63,7 @@ const space164 = 164.0;
 const space168 = 168.0;
 const space172 = 172.0;
 const space180 = 180.0;
+const space182 = 182.0;
 const space190 = 190.0;
 const space200 = 200.0;
 const space213 = 213.0;

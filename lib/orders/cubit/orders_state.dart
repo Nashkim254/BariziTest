@@ -1,10 +1,8 @@
 part of 'orders_cubit.dart';
 
-sealed class OrdersState extends Equatable {
-  const OrdersState();
-
+class OrdersState extends Equatable {
+  const OrdersState(this.index);
+  final int index;
   @override
-  List<Object> get props => [];
+  List<Object> get props => [index];
 }
-
-final class OrdersInitial extends OrdersState {}

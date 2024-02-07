@@ -6,10 +6,12 @@ const Color darkBlueColor = Color(0xff27214D);
 const Color whiteColor = Color(0xffFFFFFF);
 const Color shadedWhiteColor = Color(0xffF5f5f5);
 const Color blackColor = Color(0xff000000);
+const Color blackColor3 = Color(0xff141416);
+const Color blackColor2 = Color(0xff43484B);
 const Color lightDarkColor = Color(0xff9B9B9B);
 const Color warningColor = Color(0xffEC6666);
 const Color redColor = Color(0xffFE554A);
-const Color greenColor = Color(0xff4CD964);
+const Color greenColor = Color(0xff009254);
 const Color darkGreenColor =  Color(0xff6ce6c9);
 const Color shadedGreenColor = Color(0xffE0FFE5);
 
