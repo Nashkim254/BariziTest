@@ -29,6 +29,9 @@ $ flutter run --flavor staging --target lib/main_staging.dart
 
 # Production
 $ flutter run --flavor production --target lib/main_production.dart
+
+#Build apk for production
+$ flutter build apk --flavor production --target lib/main_production.dart
 ```
 
 _\*Barizi Nashon Test works on iOS, Android, Web, and Windows._
