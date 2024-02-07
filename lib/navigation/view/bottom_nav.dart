@@ -111,7 +111,7 @@ class HomeDashBoardScreen extends StatelessWidget {
   Widget navigateToScreen(int index, BuildContext context) {
     return switch (index) {
       0 => const HomeView(),
-      1 => const Search(),
+      1 => const FoundResults(),
       2 => const OrdersView(),
       3 => const Profile(),
       _ => const HomeView(),

@@ -112,7 +112,8 @@ class _HomeViewState extends State<HomeView> {
                     ),
                   ),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                    },
                     child: Text(
                       'Show all',
                       style: ThemeText.blackTextTheme.copyWith(
@@ -247,12 +248,12 @@ class _HomeViewState extends State<HomeView> {
               height: space12,
             ),
             Padding(
-                 padding: const EdgeInsets.symmetric(
+              padding: const EdgeInsets.symmetric(
                 horizontal: space24,
               ),
               child: buildLastContainer(),
             ),
-             const SizedBox(
+            const SizedBox(
               height: space20,
             ),
           ],
@@ -296,7 +297,7 @@ class _HomeViewState extends State<HomeView> {
   }
 
   Widget buildLastContainer() {
-     return Row(
+    return Row(
       children: List.generate(
         getLastModel.length,
         (index) => Expanded(

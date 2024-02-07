@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 
-
-
-
 double getScreenHeight(BuildContext context) {
   return MediaQuery.of(context).size.height;
 }
+
 double getScreenWidth(BuildContext context) {
   return MediaQuery.of(context).size.width;
 }
@@ -49,6 +47,7 @@ const space70 = 70.0;
 const space80 = 80.0;
 const space90 = 90.0;
 const space92 = 92.0;
+const space97 = 97.0;
 const space100 = 100.0;
 const space102 = 102.0;
 const space110 = 110.0;
@@ -70,6 +69,7 @@ const space168 = 168.0;
 const space172 = 172.0;
 const space180 = 180.0;
 const space182 = 182.0;
+const space186 = 186.0;
 const space190 = 190.0;
 const space200 = 200.0;
 const space213 = 213.0;
@@ -77,3 +77,4 @@ const space220 = 220.0;
 const space250 = 250.0;
 const space227 = 227.0;
 const space247 = 247.0;
+const space280 = 280.0;
